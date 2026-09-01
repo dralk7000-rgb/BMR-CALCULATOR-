@@ -27,4 +27,4 @@ else:
     st.write("Invalid data entered. Check gender Please type 'male' or 'female'.")    
 
 
-  ]
+ 
