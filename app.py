@@ -12,8 +12,7 @@ weight=float(st.number_input("enter your body weight: "))
 if st.button("GET RESULT"):
     mbmr=(10*weight)+(6.25*height)-(5*age)+5
     fbmr=(10*weight)+(6.25*height)-(5*age)-161
-    if bmr < 1200:
-    st.warning("⚠️ Your BMR is on the lower side. It's a good idea to consult a doctor.")
+   
 old=st.write("your actual age is: ",age,"years", 12-dob2,"months", 30-dob1,"days" )
 if gender=="male":
     st.write("HI",name,"YOUR BMR=",mbmr)
@@ -24,6 +23,9 @@ elif gender=="female":
         st.write("High BMR needs fitness advice")
     if fbmr>1400:
         st.write("High BMR needs fitness advice")
+    if fbmr<1200:
+        st.warning("Low BMR — please consult a doctor.")
+
          
 else:
     st.write("Invalid data entered. Check gender Please type 'male' or 'female'.")    
