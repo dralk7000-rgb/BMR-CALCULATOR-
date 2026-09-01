@@ -1,4 +1,4 @@
-
+import streamlit as st
 st.title("BMR Calculator")
 name=str(st.text_input("Enter the username:"))
 dob1=int(st.number_input("enter your date of birth: "))
