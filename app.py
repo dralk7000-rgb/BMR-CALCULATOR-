@@ -23,7 +23,7 @@ elif gender=="female":
         st.write("High BMR needs fitness advice")
     if fbmr>1400:
         st.write("High BMR needs fitness advice")
-    if fbmr<1200:
+    if fbmr<1400:
         st.warning("Low BMR — please consult a doctor.")
 
          
