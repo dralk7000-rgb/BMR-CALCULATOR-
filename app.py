@@ -21,10 +21,15 @@ elif gender=="female":
     st.write("HI",name,"YOUR BMR=",fbmr)     
     if mbmr>1800:
         st.write("High BMR needs fitness advice")
+    if mbmr<1400:
+            st.warning("Low BMR — please consult a doctor.")
+        st.audio("result_note.mp3")   
+ 
     if fbmr>1400:
         st.write("High BMR needs fitness advice")
     if fbmr<1400:
         st.warning("Low BMR — please consult a doctor.")
+    st.audio("result_note.mp3")
 
          
 else:
