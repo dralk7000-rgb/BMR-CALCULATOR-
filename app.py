@@ -5,10 +5,11 @@ st.title("BMR Calculator")
 
 name = str(st.text_input("Enter the username:"))
 
-dob = st.date_input("Enter your date of birth", min_value=date(1950, 1, 1), max_value=date.today(2026, 1, 1))
-#today = date.today()
-age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+dob = st.date_input("Enter your date of birth", min_value=date(1950, 1, 1), max_value=date.today())
+today = date.today()
 
+age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+st.write(age)
 gender = st.radio("Select your gender", ["male", "female"])
 height = int(st.number_input("enter your height: "))
 weight = float(st.number_input("enter your body weight: "))
