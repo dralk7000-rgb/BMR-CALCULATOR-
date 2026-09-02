@@ -5,7 +5,7 @@ st.title("BMR Calculator")
 
 name = str(st.text_input("Enter the username:"))
 
-dob = st.date_input("Enter your date of birth", min_value=date(1950, 1, 1), max_value=date(2026, 1, 1))
+dob = st.date_input("Enter your date of birth", min_value=date(1950, 1, 1), max_value=date.today(2026, 1, 1))
 #today = date.today()
 age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
 
