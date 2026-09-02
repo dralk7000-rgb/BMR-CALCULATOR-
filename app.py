@@ -9,7 +9,7 @@ dob = st.date_input("Enter your date of birth", min_value=date(1920, 1, 1), max_
 today = date.today()
 age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
 
-gender = str(st.text_input("male or female: "))
+gender = st.radio("Select your gender", ["male", "female"])
 height = int(st.number_input("enter your height: "))
 weight = float(st.number_input("enter your body weight: "))
 
@@ -34,9 +34,6 @@ if st.button("GET RESULT"):
         if fbmr < 1400:
             st.warning("Low BMR — please consult a doctor.")
         st.audio("result_note.mp3")
-
-    else:
-        st.write("Invalid data entered. Check gender Please type 'male' or 'female'.")
 
 
 #credit
