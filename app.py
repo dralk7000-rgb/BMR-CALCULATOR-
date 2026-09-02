@@ -1,8 +1,9 @@
 import streamlit as st
+from datetime import date
 
 st.title("BMR Calculator")
+
 name = str(st.text_input("Enter the username:"))
-from datetime import date
 
 dob = st.date_input("Enter your date of birth", min_value=date(1920, 1, 1), max_value=date.today())
 today = date.today()
@@ -16,7 +17,7 @@ if st.button("GET RESULT"):
     mbmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
     fbmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
 
-    st.write("your actual age is: ", age, "years", 12 - dob2, "months", 30 - dob1, "days")
+    st.write("Your age is:", age, "years")
 
     if gender == "male":
         st.write("HI", name, "YOUR BMR=", mbmr)
@@ -36,7 +37,6 @@ if st.button("GET RESULT"):
 
     else:
         st.write("Invalid data entered. Check gender Please type 'male' or 'female'.")
-
 
 
 #credit
