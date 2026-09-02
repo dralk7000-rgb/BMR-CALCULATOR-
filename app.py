@@ -2,10 +2,11 @@ import streamlit as st
 
 st.title("BMR Calculator")
 name = str(st.text_input("Enter the username:"))
-dob1 = int(st.number_input("enter your date of birth: "))
-dob2 = int(st.number_input("enter the month of dob: "))
-dob3 = int(st.number_input("enter the year of dob: "))
-age = 2026 - dob3
+from datetime import date
+
+dob = st.date_input("Enter your date of birth", min_value=date(1920, 1, 1), max_value=date.today())
+today = date.today()
+age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
 
 gender = str(st.text_input("male or female: "))
 height = int(st.number_input("enter your height: "))
