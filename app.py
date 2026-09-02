@@ -9,7 +9,7 @@ dob = st.date_input("Enter your date of birth", min_value=date(1950, 1, 1), max_
 today = date.today()
 
 age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-st.write(age)
+
 gender = st.radio("Select your gender", ["male", "female"])
 height = int(st.number_input("enter your height: "))
 weight = float(st.number_input("enter your body weight: "))
@@ -19,6 +19,7 @@ if st.button("GET RESULT"):
     fbmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
 
     st.write("Your age is:", age, "years")
+    st.write(age)
 
     if gender == "male":
         st.write("HI", name, "YOUR BMR=", mbmr)
